@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 90px 4rem 60px; /* Adjusted padding to ensure content doesn't go under header */
+  padding: 90px 4rem 60px;
   background: linear-gradient(180deg, var(--background-color) 0%, white 100%);
 }
 
