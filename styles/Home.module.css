@@ -1,6 +1,15 @@
 /* styles/Home.module.css */
 
-:root {
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container and Layout - Modified for fixed elements */
+.container {
   --primary-color: #007bff; /* Blue */
   --primary-dark: #0056b3;
   --primary-light: #e6f2ff;
@@ -15,18 +24,7 @@
   --border-color: #dee2e6; /* Light Border */
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* Container and Layout - Modified for fixed elements */
-.container {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
