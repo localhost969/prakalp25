@@ -1,14 +1,6 @@
 /* styles/Home.module.css */
 
-body {
-  margin: 0;
-  font-family: 'Poppins', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* Container and Layout - Modified for fixed elements */
+/* Container and Layout */
 .container {
   --primary-color: #007bff; /* Blue */
   --primary-dark: #0056b3;
