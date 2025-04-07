@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://iot25.vercel.app/api/data');
+      const response = await fetch('http://iot25.vercel.app/api/data');
       if (!response.ok) throw new Error('Failed to fetch data');
       const data = await response.json();
       setHealthData(data);
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
                     alt="System Architecture Diagram"
                     width={800}
                     height={400}
-                    layout="responsive"
+                    unoptimized={true}
                     className={styles.archImg}
                   />
                 </div>
