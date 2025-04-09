@@ -61,6 +61,20 @@
   line-height: 1.2;
 }
 
+/* Larger title for header */
+.titleLarge {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  color: var(--text-color);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Improved Navigation Tabs */
 .tabs {
   display: flex;
@@ -151,6 +165,42 @@
   box-shadow: var(--card-shadow);
 }
 
+.lastUpdatedContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refreshButton {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.refreshButton:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: rotate(180deg);
+}
+
+.refreshButton:active {
+  transform: scale(0.95) rotate(180deg);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
 .subtitle {
   font-size: 1.5rem;
   font-weight: 700;
@@ -180,6 +230,107 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 500;
+}
+
+/* Table layout for data */
+.tableContainer {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  margin-top: 1rem;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.dataTable th {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.dataTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+.dataTable tr:hover {
+  background-color: rgba(0, 123, 255, 0.03);
+}
+
+.tableValue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pagination Controls */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.paginationButton {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.paginationButton:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.paginationButton:disabled {
+  background: var(--secondary-light);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.itemsPerPageControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.itemsPerPageSelect {
+  padding: 0.3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: white;
+  color: var(--text-color);
 }
 
 /* About Section Improvements */
@@ -531,4 +682,88 @@
   0% { opacity: 0.6; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.05); }
   100% { opacity: 0.6; transform: scale(0.95); }
+}
+
+/* Enhanced time column styling */
+.timeColumn {
+  min-width: 200px;
+  width: 25%;
+  background-color: var(--primary-light);
+}
+
+.timeDisplay {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timeIcon {
+  background-color: var(--primary-color);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.timeDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeDate {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  order: 2;
+  margin-top: 2px;
+}
+
+.timeHour {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  order: 1;
+  background-color: rgba(0, 123, 255, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.refreshControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.countdownTimer {
+  position: relative;
+  width: 60px;
+  height: 6px;
+  background: var(--secondary-light);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdownInner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 3px;
+  transition: width 1s linear;
+}
+
+.countdownTimer span {
+  position: absolute;
+  font-size: 0.7rem;
+  color: var(--primary-dark);
+  z-index: 1;
+  font-weight: 600;
 }
