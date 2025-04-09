@@ -24,8 +24,8 @@ const Home: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(5);
   const [refreshing, setRefreshing] = useState(false);
-  const [countdown, setCountdown] = useState(10);
-  const refreshInterval = 10; // seconds
+  const [countdown, setCountdown] = useState(30);
+  const refreshInterval = 30; // seconds
 
   // Team members data
   const teamMembers: TeamMember[] = [
