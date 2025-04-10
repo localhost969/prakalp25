@@ -1,25 +1,25 @@
 {
-  "name": "iot",
-  "version": "0.1.0",
+  "name": "iot-health-monitoring",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "SKIP_TYPE_CHECK=true NEXT_SKIP_LINT=true next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.6.3",
-    "next": "15.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "chart.js": "^4.3.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.29",
+    "next": "^12.0.0",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/node": "^18.0.0",
+    "@types/react": "^17.0.43",
+    "typescript": "^4.9.5"
   }
 }
